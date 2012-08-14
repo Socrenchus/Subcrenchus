@@ -4,7 +4,8 @@ class Router extends Backbone.Router
     "*args": "fallthrough"
    
   fallthrough: (args) ->
-    $('iframe').attr( 'src', "http://www.socrench.us/i/#{window.location.host}#{args}")
+    $('iframe').attr( 'src', "http://localhost:3000/i/#{window.location.host}/#{args}")
+    history.replaceState(null,'Socrenchus','/')
 
 Router = new Router()
 
